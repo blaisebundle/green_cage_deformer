@@ -5,8 +5,8 @@ set(PROJECT_PATH ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT})
 set(CMAKE_INSTALL_PREFIX ${PROJECT_PATH})
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-file(GLOB SOURCES src/*.cpp src/*.cc include/*.h include/*.hh)
-include_directories(include)
+file(GLOB SOURCES src/*.cpp src/*.cc src/*.h src/*.hh)
+include_directories(libs)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 find_package(Maya REQUIRED)
